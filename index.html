@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>3 Column Layout</title>
+   <link rel="stylesheet" href="assets/css/layout.css">
+</head>
+<body>
+<header class="header"><p>Header...</p></header>
+<div class="container">
+   <main class="center column">
+       <article>
+           <h1>Heading</h1>
+           <p></p>
+       </article>
+   </main>
+   <nav class="left column">
+       <h3>Left heading</h3>
+       <ul>
+           <li><a href="#">Link 1</a></li>
+           <li><a href="#">Link 2</a></li>
+       </ul>
+       <h3>Left heading</h3>
+       <ul>
+           <li><a href="#">Link 1</a></li>
+           <li><a href="#">Link 2</a></li>
+       </ul>
+   </nav>
+   <div class="right column">
+       <h3>Right heading</h3>
+       <p></p>
+   </div>
+</div>
+<div class="footer-wrapper">
+   <footer class="footer"><p>Footer...</p></footer>
+</div>
+</body>
+</html>
+
+та layout.css:
+
+body {
+   min-width: 630px;
+}
+
+.container {
+   padding-left: 200px;
+   padding-right: 190px;
+}
+
+.container .column {
+   position: relative;
+   float: left;
+}
+
+.center {
+   padding: 10px 20px;
+   width: 100%;
+}
+
+.left {
+   width: 180px;
+   padding: 0 10px;
+   right: 240px;
+   margin-left: -100%;
+}
+
+.right {
+   width: 130px;
+   padding: 0 10px;
+   margin-right: -100%;
+}
+
+.footer {
+   clear: both;
+}
+.container {
+   overflow: hidden;
+}
+.container .column {
+   padding-bottom: 1001em;
+   margin-bottom: -1000em;
+}
+
+.footer-wrapper {
+   float: left;
+   position: relative;
+   width: 100%;
+   background: #fff;
+}
+body {
+   margin: 0;
+   padding: 0;
+   font-family:Sans-serif;
+   line-height: 1.5em;
+}
+p {
+   color: #555;
+}
+nav ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+}
+nav ul a {
+   color: green;
+   text-decoration: none;
+}
+.header, .footer {
+   font-size: large;
+   padding: 0.3em;
+   background: #BCCE98;
+}
+
+.left {
+   background: #DAE9BC;
+}
+.right {
+   background: #F7FDEB;
+}
+.center {
+   background: #fff;
+}
+.container .column {
+   padding-top: 1em;
+}
+
